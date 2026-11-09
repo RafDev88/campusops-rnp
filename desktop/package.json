@@ -1,0 +1,9 @@
+{
+  "name": "campusops-desktop",
+  "version": "0.2.0",
+  "private": true,
+  "description": "CampusOps desktop client for the local Docker workspace",
+  "main": "main.cjs",
+  "scripts": { "start": "electron .", "check": "node --check main.cjs" },
+  "devDependencies": { "electron": "^45.2.3" }
+}

@@ -1,0 +1,21 @@
+# Always use -p campusops-demo with this override. All data are separate.
+# Only start db redis api web: demonstration does not run external workers.
+services:
+  db:
+    environment:
+      POSTGRES_DB: campusops_demo
+      POSTGRES_PASSWORD: demo-local-password
+  api:
+    environment:
+      DATABASE_URL: postgresql+psycopg://campusops:demo-local-password@db:5432/campusops_demo
+      CAMPUSOPS_DEMO: 'true'
+      OPENALEX_API_KEY: ''
+      ORCID_ACCESS_TOKEN: ''
+      WEBHOOK_ALLOWED_HOSTS: ''
+      WEBHOOK_SIGNING_SECRET: ''
+      COOKIE_SECURE: 'false'
+    ports: !override
+      - '127.0.0.1:8002:8000'
+  web:
+    ports: !override
+      - '127.0.0.1:8081:80'

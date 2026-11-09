@@ -1,0 +1,29 @@
+{
+  "name": "campusops-ui",
+  "private": true,
+  "version": "0.8.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vue-tsc --noEmit && vite build",
+    "test:e2e": "playwright test",
+    "format": "prettier --write src tests *.ts package.json"
+  },
+  "dependencies": {
+    "@lucide/vue": "^1.0.0",
+    "@primeuix/themes": "^1.0.0",
+    "echarts": "^6.0.0",
+    "primevue": "^4.3.0",
+    "vue": "^3.5.0",
+    "vue-echarts": "^8.0.0",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@vitejs/plugin-vue": "^5.2.0",
+    "prettier": "^3.9.10",
+    "typescript": "~5.7.0",
+    "vite": "^6.1.0",
+    "vue-tsc": "^3.3.14"
+  }
+}
