@@ -1,0 +1,21 @@
+/* Shared visual decisions. Components consume these tokens, not a new palette. */
+:root {
+  --color-primary: #1351b4;
+  --color-primary-strong: #0c326f;
+  --color-ink: #18334f;
+  --color-muted: #526071;
+  --color-border: #dce2e9;
+  --color-surface: #f5f8fc;
+  --color-paper: #fff;
+  --font-ui: Arial, Helvetica, sans-serif;
+  --radius-sm: 5px;
+  --radius-panel: 8px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --focus-color: #b66c00;
+}
