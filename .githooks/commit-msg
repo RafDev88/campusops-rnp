@@ -1,0 +1,9 @@
+#!/bin/sh
+# Git for Windows executes hooks through its bundled POSIX shell.
+for python_cmd in .venv/Scripts/python.exe .venv/bin/python python python3; do
+    if "$python_cmd" -c 'import sys; sys.exit(sys.version_info[0] != 3)' >/dev/null 2>&1; then
+        exec "$python_cmd" scripts/check-commit-message.py "$1"
+    fi
+done
+printf '%s\n' 'Python 3 não encontrado. Ative o ambiente virtual do projeto.' >&2
+exit 1
